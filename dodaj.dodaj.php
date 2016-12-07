@@ -30,7 +30,7 @@ if( isset( $_POST['btn-upload'] ) ){
     }
     else{    
  
-    echo ' <a href="logowanie.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
+    echo ' <a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
    
 }
 }
