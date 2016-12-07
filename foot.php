@@ -24,7 +24,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="single_footer_top wow fadeInRight">
-            <h2>About Us</h2>
+            <h2>O nas</h2>
             <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec laoreet orci, eget ullamcorper quam. Phasellus lorem neque, </p>
           </div>
         </div>
