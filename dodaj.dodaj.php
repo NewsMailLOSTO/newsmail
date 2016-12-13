@@ -19,11 +19,18 @@ if( isset( $_POST['btn-upload'] ) ){
     if(empty($haslo)){ $mojerror=$mojerror.'Nie wpisałeś hasła <br/>'; }
    
     $aktywny=0;
-   
+   $kategoria=3;
     if(empty($mojerror)){    
     mysql_select_db($db_database, $db_dodaj);
-    $sql="INSERT INTO user (imie, nazwisko, email, haslo, kat_uzytkownikow, aktywny) VALUES('$imie', '$nazwisko', '$email', SHA1('$haslo'), '0', '$aktywny'";
-    mysql_query($sql, $db_dodaj) or die(mysql_error());
+    $sql="INSERT INTO user VALUES ('','$imie', '$nazwisko', '$email', SHA1('$haslo'), '$kategoria', '$aktywny')";
+    if(mysql_query($sql, $db_dodaj))
+    {
+     echo "Dodałem";   
+    }else{
+    
+       echo "Nie poszło";
+        
+    }
     
     echo '</div>';
     
