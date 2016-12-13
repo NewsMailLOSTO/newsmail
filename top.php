@@ -1,7 +1,8 @@
-
+<!--
 <div id="preloader">
   <div id="status">&nbsp;</div>
 </div>
+-->
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <div class="container">
   <header id="header">
@@ -10,7 +11,7 @@
         <div class="header_top">
           <div class="header_top_left">
             <ul class="top_nav">
-              <li><a href="<?php echo $krowa;?>index.html">Home</a></li>
+              <li><a href="<?php echo $krowa;?>index.php">Home</a></li>
               <li><a href="<?php echo $krowa;?>pages/page.html">About</a></li>
               <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
               <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
