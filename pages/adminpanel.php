@@ -1,4 +1,4 @@
 <?php
-    include ('lewy.php');
-    include ('prawy.php');
+    include ('../lewy.php');
+    include ('../prawy.php');
 ?>
