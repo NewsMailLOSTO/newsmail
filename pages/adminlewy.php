@@ -3,7 +3,7 @@
         <div class="content_bottom_left">
 	  <!-- Ostatnio dodane -->        
           <div class="single_category wow fadeInDown">
-            <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <a class="title_text" href="#">Ostatnio dodane</a> </h2>
+            <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <a class="title_text" href="#">Admin</a> </h2>
             <div class="business_category_left wow fadeInDown">
               <ul class="fashion_catgnav">
                 <li>

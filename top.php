@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="header_bottom">
-          <div class="header_bottom_left"><a class="logo" href="<?php echo $krowa;?>index.html">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
+          <div class="header_bottom_left"><a class="logo" href="<?php echo $krowa;?>index.php">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
           <div class="header_bottom_right"><a href="#"><img src="<?php echo $krowa;?>images/logo.png" alt=""></a></div>
         </div>
       </div>
@@ -39,7 +39,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav custom_nav">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="<?php echo $krowa;?>index.php">Home</a></li>
             <li class="dropdown"> <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">Archives</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo $krowa;?>pages/archive-main.html">Archive</a></li>
