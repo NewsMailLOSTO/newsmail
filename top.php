@@ -1,7 +1,8 @@
-
+<!--
 <div id="preloader">
   <div id="status">&nbsp;</div>
 </div>
+-->
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <div class="container">
   <header id="header">
@@ -10,10 +11,10 @@
         <div class="header_top">
           <div class="header_top_left">
             <ul class="top_nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="pages/page.html">About</a></li>
-              <li><a href="pages/contact.html">Contact</a></li>
-              <li><a href="pages/404.html">Error Page</a></li>
+              <li><a href="<?php echo $krowa;?>index.php">Home</a></li>
+              <li><a href="<?php echo $krowa;?>pages/page.html">About</a></li>
+              <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
+              <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
             </ul>
           </div>
           <div class="header_top_right">
@@ -24,8 +25,8 @@
           </div>
         </div>
         <div class="header_bottom">
-          <div class="header_bottom_left"><a class="logo" href="index.html">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
-          <div class="header_bottom_right"><a href="#"><img src="images/logo.png" alt=""></a></div>
+          <div class="header_bottom_left"><a class="logo" href="<?php echo $krowa;?>index.php">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
+          <div class="header_bottom_right"><a href="#"><img src="<?php echo $krowa;?>images/logo.png" alt=""></a></div>
         </div>
       </div>
     </div>
@@ -38,18 +39,18 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav custom_nav">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="<?php echo $krowa;?>index.php">Home</a></li>
             <li class="dropdown"> <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">Archives</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="pages/archive-main.html">Archive</a></li>
-                <li><a href="pages/archive1.html">Archive 1</a></li>
-                <li><a href="pages/archive2.html">Archive 2</a></li>
-                <li><a href="pages/archive3.html">Archive 3</a></li>
+                <li><a href="<?php echo $krowa;?>pages/archive-main.html">Archive</a></li>
+                <li><a href="<?php echo $krowa;?>pages/archive1.html">Archive 1</a></li>
+                <li><a href="<?php echo $krowa;?>pages/archive2.html">Archive 2</a></li>
+                <li><a href="<?php echo $krowa;?>pages/archive3.html">Archive 3</a></li>
               </ul>
             </li>
-            <li><a href="pages/single.html">Single page</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-            <li><a href="pages/404.html">404 page</a></li>
+            <li><a href="<?php echo $krowa;?>pages/single.html">Single page</a></li>
+            <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
+            <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
           </ul>
         </div>
       </div>
