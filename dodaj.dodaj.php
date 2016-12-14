@@ -25,7 +25,7 @@ if( isset( $_POST['btn-upload'] ) ){
     $sql="INSERT INTO user VALUES ('','$imie', '$nazwisko', '$email', SHA1('$haslo'), '$kategoria', '$aktywny')";
     if(mysql_query($sql, $db_dodaj))
     {
-     echo "Dodałem";   
+      echo '<div> "Dodałem" </div>';   
     }else{
     
        echo "Nie poszło";
