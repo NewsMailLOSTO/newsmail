@@ -8,22 +8,6 @@
   <header id="header">
     <div class="row">
       <div class="col-lg-12 col-md-12">
-        <div class="header_top">
-          <div class="header_top_left">
-            <ul class="top_nav">
-              <li><a href="<?php echo $krowa;?>index.php">Home</a></li>
-              <li><a href="<?php echo $krowa;?>pages/page.html">About</a></li>
-              <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
-              <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
-            </ul>
-          </div>
-          <div class="header_top_right">
-            <form action="#" class="search_form">
-              <input type="text" placeholder="Text to Search">
-              <input type="submit" value="">
-            </form>
-          </div>
-        </div>
         <div class="header_bottom">
           <div class="header_bottom_left"><a class="logo" href="<?php echo $krowa;?>index.php">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
           <div class="header_bottom_right"><a href="#"><img src="<?php echo $krowa;?>images/logo.png" alt=""></a></div>
@@ -51,6 +35,7 @@
             <li><a href="<?php echo $krowa;?>pages/single.html">Single page</a></li>
             <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
             <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
+            <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
           </ul>
         </div>
       </div>
