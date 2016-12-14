@@ -36,7 +36,16 @@
             <li><a href="<?php echo $krowa;?>pages/contact.html">Contact</a></li>
             <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
+	    
+		<div class="header_top_right">
+		    <form action="#" class="search_form">
+			<input type="text" placeholder="Text to Search">
+			<input type="submit" value="">
+		    </form>
+		</div>
+	    
           </ul>
+	    
         </div>
       </div>
     </nav>
