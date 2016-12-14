@@ -250,4 +250,20 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 #rej{
    text-align:center;
    position: center;
+   color:greenyellow;
+   text-height:2em;
+}
+#rej-button{
+    margin-left:auto;
+    margin-right:auto;
+}
+#rej2{
+   text-align:center;
+   position: center;
+   color:red;
+   text-height:2em;
+}
+table.kupa{
+    margin-left:auto;
+    margin-right:auto; 
 }
