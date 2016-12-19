@@ -1,7 +1,15 @@
 <?php
     include('head.php');
     include('top.php');
-   
+   $imie= htmlspecialchars(trim($_POST['imie']));
+$email=htmlspecialchars(trim($_POST['email']));
+$wiadomosc= htmlspecialchars(trim($_POST['wiadomosc']));
+$send= $_POST['send'];
+
+$odbiorca = "email";
+
+
+
 ?>
 
 
