@@ -25,22 +25,16 @@ if( isset( $_POST['btn-upload'] ) ){
     $sql="INSERT INTO user VALUES ('','$imie', '$nazwisko', '$email', SHA1('$haslo'), '$kategoria', '$aktywny')";
     if(mysql_query($sql, $db_dodaj))
     {
-     echo "Dodałem";   
+      echo '<div id="rej"> "Dodałem" </div>';   
     }else{
     
-       echo "Nie poszło";
-        
+       echo '<div id=rej2> "Nie poszło" </div>';
     }
-    
     echo '</div>';
-    
     }
     else{    
- 
     echo ' <a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
-   
 }
 }
- 
 include('foot.php');
 ?>
