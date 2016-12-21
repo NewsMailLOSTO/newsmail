@@ -13,7 +13,6 @@ $odbiorca = "email";
 ?>
 
 
-
 <form action="dodaj.dodaj.php" method="post" name="form1" id="form1" onsubmit="return sprawdz_formularz();">
     
     <table class="kupa" border=1px><tr><td>Imię: </td><td> <input type='text' name='imie' id='imie' placeholder='Imię' maxlength="16"/></td></tr>
