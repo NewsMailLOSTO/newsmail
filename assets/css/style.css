@@ -266,6 +266,14 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 table.kupa{
     margin-left:auto;
     margin-right:auto; 
+	border: 0;
+}
+td.tablab{
+	text-align: right;
+}
+td{
+	padding: 0.5em;
+	
 }
 /*
 Lenistwo ponad wszystko https://isabelcastillo.com/error-info-messages-css 

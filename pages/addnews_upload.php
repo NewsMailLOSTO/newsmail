@@ -30,19 +30,18 @@
     $kategoria = ($_POST['kategoria']);
     if (empty($kategoria)) {
 	$mojerror = $mojerror . 'Nie wybrałeś kategorii<br/>';
-    }    
+    }      
 	
-		
-    echo('<div class=notif-info> Hmm: ' . $db_hostname . '</div>');
+	$data = date("Y-m-d H:i:s");
 	
     if (empty($mojerror)) {
 	mysql_select_db($db_database, $db_dodaj);
-	$sql = "INSERT INTO news VALUES ('','', '$redaktor', '$tytul', '$wstep','$tresc', '$id_kat_newsow', '')";
+	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '')";
 	if (mysql_query($sql, $db_dodaj)) {
 	   	    echo '<div class="notif-success">Dodano</div>';
 
 	} else {
-		
+		echo('<div class=notif-info> Hmm: ' . $sql . '<br>' . $kategoria . '</div>');
 	    echo '<div class="notif-error">Nie poszło: ';
 		echo mysql_error();
 		echo '</div>';
