@@ -10,7 +10,7 @@
 	<form action="addnews_upload.php" method="post" name="form1" id="form1" onsubmit="return sprawdz_formularz()">
 		<table class="kupa">
 		<tr><td class="tablab">Redaktor:</td><td> <input type='text' name='redaktor' id='redaktor' placeholder='Redaktor' maxlength="32"/> </td></tr>
-		<tr><td class="tablab">Tytuł:</td><td> <input type='text' name='tytul' id='tytul' placeholder='Tytuł' maxlength="64"/></td></tr>
+		<tr><td class="tablab">Tytuł:</td><td> <input type='text' name='tytul' id='tytul' placeholder='Tytuł' maxlength="256"/></td></tr>
 
 		<tr><td class="tablab">Kategoria:</td><td>
 			<select name="kategoria" id="kategoria">
@@ -22,9 +22,9 @@
 			</select>
 		</tr></td>
 
-		<tr><td class="tablab">Wstęp:</td><td> <input type='text' name='wstep' id='wstep' placeholder='Wstęp' maxlength="64"/></td></tr>
+		<tr><td class="tablab">Wstęp:</td><td> <input type='text' name='wstep' id='wstep' placeholder='Wstęp'/></td></tr>
 	<!--	<tr><td>Treść:</td><td> <input type='text' name='tresc' id='tresc' placeholder='Treść' maxlength="64"/></td></tr>   -->
-		<tr><td class="tablab">Treść:</td><td> <textarea name='tresc' id='tresc' placeholder='Treść' maxlength="64"/></textarea></td></tr>
+		<tr><td class="tablab">Treść:</td><td> <textarea name='tresc' id='tresc' placeholder='Treść'/></textarea></td></tr>
 
 		</table>
 

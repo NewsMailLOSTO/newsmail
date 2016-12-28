@@ -19,7 +19,7 @@ if (isset($_GET['pageNum_Recordset1'])) {
 $startRow_Recordset1 = $pageNum_Recordset1 * $maxRows_Recordset1;
 
 mysql_select_db($db_database, $db) or die(mysql_error($db));
-$query_Recordset1 = "SELECT * FROM news ORDER BY data";
+$query_Recordset1 = "SELECT * FROM news ORDER BY data DESC";
 $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
 $Recordset1 = mysql_query($query_limit_Recordset1, $db);
 if($Recordset1){

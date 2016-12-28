@@ -6,7 +6,7 @@
             <h2>Kategorie newsów</h2>
             <ul class="small_catg popular_catg wow fadeInDown">
               <li>
-                <div class="media wow fadeInDown"> <a href="#" class="media-left"><img alt="" src="images/112x112.jpg"> </a>
+                <div class="media wow fadeInDown">
                   <div class="media-body">
                     <h4 class="media-heading"><a href="#">Kupa kupa kupa </a></h4>
                     <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
@@ -14,7 +14,7 @@
                 </div>
               </li>
               <li>
-                <div class="media wow fadeInDown"> <a href="#" class="media-left"><img alt="" src="images/112x112.jpg"> </a>
+                <div class="media wow fadeInDown">
                   <div class="media-body">
                     <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
                     <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
@@ -22,7 +22,7 @@
                 </div>
               </li>
               <li>
-                <div class="media wow fadeInDown"> <a href="#" class="media-left"><img alt="" src="images/112x112.jpg"> </a>
+                <div class="media wow fadeInDown">
                   <div class="media-body">
                     <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
                     <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>

@@ -7,36 +7,38 @@
             <div class="business_category_left wow fadeInDown">
               <ul class="fashion_catgnav">
                 <li>
-                  <div class="catgimg2_container"> <a href="pages/single.html"><img alt="" src="images/390x240x1.jpg"></a> </div>
-                  <h2 class="catg_titile"><a href="pages/single.html">Aenean mollis metus sit amet ligula adipiscing</a></h2>
-                  <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> <span class="meta_more"><a  href="#">Read More...</a></span> </div>
-                  <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla...</p>
+		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><img alt="" src="images/390x240x1.jpg"></a> </div>
+                  <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><?php echo $newsy[0][3]; ?></a></h2>
+                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?><</span> <span class="meta_comment"><a href="#">No Comments</a></span> <span class="meta_more"><a  href="#">Read More...</a></span> 
+		    <p><?php echo $newsy[0][4]; ?></p>
+		  </div>
+                  
                 </li>
               </ul>
             </div>
             <div class="business_category_right wow fadeInDown">
               <ul class="small_catg">
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="pages/single.html"><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
-                      <h4 class="media-heading"><a href="pages/single.html">Duis condimentum nunc pretium lobortis </a></h4>
-                      <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><?php echo $newsy[1][3]; ?></a></h4>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[1][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[2][0]; ?> "><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
-                      <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                      <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[2][0]; ?>"><?php echo $newsy[2][3]; ?></a></h4>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[2][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
-                      <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                      <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><?php echo $newsy[3][3]; ?></a></h4>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[3][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
