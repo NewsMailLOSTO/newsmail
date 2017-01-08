@@ -37,7 +37,7 @@
 	    $newsy_kolumny = array();
 	    if ($row_Recordset1['id_news'] >= $totalRows_Recordset1) {
 		$newsy_kolumny[0] = $row_Recordset1['id_news'];
-	    	$newsy_kolumny[1] = $row_Recordset1['data'];
+	    $newsy_kolumny[1] = $row_Recordset1['data'];
 		$newsy_kolumny[2] = $row_Recordset1['redaktor'];
 		$newsy_kolumny[3] = $row_Recordset1['tytul'];
 		$newsy_kolumny[4] = $row_Recordset1['wstep'];

@@ -13,22 +13,6 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="media wow fadeInDown">
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown">
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
 	    
