@@ -37,6 +37,7 @@
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
 	    
 		<div class="header_top_right">
+			
 		    <form action="#" class="search_form">
 			<input type="text" placeholder="Text to Search">
 			<input type="submit" value="">
