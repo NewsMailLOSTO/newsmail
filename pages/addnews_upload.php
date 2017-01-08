@@ -2,8 +2,10 @@
     include ('../head.php');
     include ('../top.php');
     include ('adminlewy.php');
+    include ('../db.php');
     
-    
+    echo('<div class="col-lg-8 col-md-8">');
+	
     if (isset($_POST['btn-upload'])) {
 	$redaktor = htmlspecialchars($_POST['redaktor']);
     if (empty($redaktor)) {
@@ -28,17 +30,21 @@
     $kategoria = ($_POST['kategoria']);
     if (empty($kategoria)) {
 	$mojerror = $mojerror . 'Nie wybrałeś kategorii<br/>';
-    }
-    
-    
+    }      
+	
+	$data = date("Y-m-d H:i:s");
+	
     if (empty($mojerror)) {
 	mysql_select_db($db_database, $db_dodaj);
-	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$id_kat_newsow', '$user_id_user')";
+	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '')";
 	if (mysql_query($sql, $db_dodaj)) {
-	    echo "Dodałem";
-	} else {
+	   	    echo '<div class="notif-success">Dodano</div>';
 
-	    echo "Nie poszło";
+	} else {
+		echo('<div class=notif-info> Hmm: ' . $sql . '<br>' . $kategoria . '</div>');
+	    echo '<div class="notif-error">Nie poszło: ';
+		echo mysql_error();
+		echo '</div>';
 	}
 
 	echo '</div>';

@@ -24,15 +24,14 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav custom_nav">
             <li class=""><a href="<?php echo $krowa;?>index.php">Home</a></li>
-            <li class="dropdown"> <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">Archives</a>
+            <!--<li class="dropdown"> <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">Archives</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<?php echo $krowa;?>pages/archive-main.html">Archive</a></li>
                 <li><a href="<?php echo $krowa;?>pages/archive1.html">Archive 1</a></li>
                 <li><a href="<?php echo $krowa;?>pages/archive2.html">Archive 2</a></li>
                 <li><a href="<?php echo $krowa;?>pages/archive3.html">Archive 3</a></li>
               </ul>
-            </li>
-            <li><a href="<?php echo $krowa;?>pages/single.html">Single page</a></li>
+            </li>-->
             <li><a href="<?php echo $krowa;?>rejestracja.php">Rejestracja</a></li>
             <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>

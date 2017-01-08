@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     include 'config.php';
+    include 'newskat.php';
 
 ?>
 <html>
