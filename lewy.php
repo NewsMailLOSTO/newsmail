@@ -9,7 +9,7 @@
                 <li>
 		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><img alt="" src="images/390x240x1.jpg"></a> </div>
                   <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><?php echo $newsy[0][3]; ?></a></h2>
-                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?><</span> <span class="meta_comment"><a href="#">No Comments</a></span> <span class="meta_more"><a  href="#">Read More...</a></span> 
+                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?><</span> <span class="meta_comment"><a href="#"><?php echo $newsy[0][3]; ?></a></span> 
 		    <p><?php echo $newsy[0][4]; ?></p>
 		  </div>
                   

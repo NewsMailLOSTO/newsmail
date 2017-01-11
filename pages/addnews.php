@@ -15,10 +15,13 @@
 		<tr><td class="tablab">Kategoria:</td><td>
 			<select name="kategoria" id="kategoria">
 				<option value=""></option>
-				<option value=1>Sport</option>
-				<option value=2>Polska</option>
-				<option value=3>Świat</option>
-				<option value=4>Kosmos</option>
+				<?php
+				    for($i = 0; $i < count($kategorie); $i++){
+							echo '<option value="' . $kategorie[$i][0] . '">';
+							echo $kategorie[$i][1];	
+							echo '</option>';
+						}
+				?>
 			</select>
 		</tr></td>
 
