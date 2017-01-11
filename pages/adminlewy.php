@@ -8,7 +8,7 @@
 		    <li><h4 class="media-heading"><a href="addnews.php">Dodaj news </a></h4></li>
 		    <li><h4 class="media-heading"><a href="#">Remove </a></h4></li>
 		    <li><h4 class="media-heading"><a href="allnews.php">Wszystkie newsy </a></h4></li>
-		    <li><h4 class="media-heading"><a href="#">Test</a></h4></li>
+		    <li><h4 class="media-heading"><a href="addkateg.php">Dodaj kategorię </a></h4></li>
 		</ul>
 	    </div>
 	    

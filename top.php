@@ -33,7 +33,7 @@
               </ul>
             </li>-->
             <li><a href="<?php echo $krowa;?>rejestracja.php">Rejestracja</a></li>
-            <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
+            <li><a href="<?php echo $krowa;?>login.php">Login</a></li>
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
 	    
 		<div class="header_top_right">

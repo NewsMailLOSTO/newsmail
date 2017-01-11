@@ -1,20 +1,19 @@
       <div class="col-lg-4 col-md-4">
         <div class="content_bottom_right">
 	    
-	  <!-- Kategorie newsów-->          
-          <div class="single_bottom_rightbar">
-            <h2>Kategorie newsów</h2>
-            <ul class="small_catg popular_catg wow fadeInDown">
-              <li>
-                <div class="media wow fadeInDown">
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Kupa kupa kupa </a></h4>
-                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+			<!-- Kategorie newsów-->          
+			<div class="single_bottom_rightbar">
+				<h2>Kategorie newsów</h2>
+				<ul class="small_catg popular_catg wow fadeInDown">
+					<?php
+						for($i = 0; $i < count($kategorie); $i++){
+							echo '<li>';
+							echo '<h4 class="media-heading"><a href="?id=' . $kategorie[$i][0] . '">' . $kategorie[$i][1] . '</a></h4>';	
+							echo '</li>';
+						}
+					?>
+				</ul>
+			</div>
 	    
 	  <!-- Karty -->          
           <div class="single_bottom_rightbar">
