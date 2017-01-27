@@ -47,6 +47,7 @@
 		$newsy_kolumny[6] = $row_Recordset1['id_kat_newsow'];
 		$newsy_kolumny[7] = $row_Recordset1['id_ocena'];
 		$newsy_kolumny[8] = $row_Recordset1['wyswietlenia'];
+		$newsy_kolumny[9] = $row_Recordset1['ostatnio_czytane'];
 		$newsy[] = $newsy_kolumny;
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
@@ -94,6 +95,12 @@
 	    usort($newsy_wyswietlenia, 'sortByViews');
 	    function sortByViews($a, $b){
 		return $b[8] - $a[8];
+	    }
+	    
+	    $newsy_czytane = $newsy;
+	    usort($newsy_czytane, 'sortByLastRead');
+	    function sortByLastRead($a, $b){
+		return $b[9] - $a[9];
 	    }
 	
 	 
