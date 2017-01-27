@@ -39,12 +39,14 @@
 	    $newsy_kolumny = array();
 	    if ($row_Recordset1['id_news'] >= $totalRows_Recordset1) {
 		$newsy_kolumny[0] = $row_Recordset1['id_news'];
-	    $newsy_kolumny[1] = $row_Recordset1['data'];
+		$newsy_kolumny[1] = $row_Recordset1['data'];
 		$newsy_kolumny[2] = $row_Recordset1['redaktor'];
 		$newsy_kolumny[3] = $row_Recordset1['tytul'];
 		$newsy_kolumny[4] = $row_Recordset1['wstep'];
 		$newsy_kolumny[5] = $row_Recordset1['tresc'];
 		$newsy_kolumny[6] = $row_Recordset1['id_kat_newsow'];
+		$newsy_kolumny[7] = $row_Recordset1['id_ocena'];
+		$newsy_kolumny[8] = $row_Recordset1['wyswietlenia'];
 		$newsy[] = $newsy_kolumny;
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
@@ -56,7 +58,7 @@
 	
 	
 	
-	$query_Recordset1 = "SELECT * FROM `kat_newsow` WHERE 1";
+    $query_Recordset1 = "SELECT * FROM `kat_newsow` WHERE 1";
     $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
     $Recordset1 = mysql_query($query_limit_Recordset1, $db);
     if ($Recordset1) {
@@ -86,4 +88,13 @@
 			$kategorie[] = $kategorie_kolumny;
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
+	
+	
+	    $newsy_wyswietlenia = $newsy;
+	    usort($newsy_wyswietlenia, 'sortByViews');
+	    function sortByViews($a, $b){
+		return $b[8] - $a[8];
+	    }
+	
+	 
 ?>

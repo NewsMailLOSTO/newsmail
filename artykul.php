@@ -13,6 +13,11 @@
     } else {
 	echo '<div class="notif-warning">' . mysql_error() . '</div>';
     }    
+    $query = mysql_query("UPDATE news SET wyswietlenia = wyswietlenia + 1 WHERE id_news = " . $news_id, $db);
+    if ($query) {
+    } else {
+	echo '<div class="notif-warning">' . mysql_error() . '</div>';
+    }    
 ?>
 <div class="col-lg-8 col-md-8">
     <div class="content_bottom_left">

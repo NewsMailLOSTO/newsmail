@@ -22,34 +22,44 @@
               <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="messages" href="#recentComent">Ostatnio czytane</a></li>
             </ul>
             <div class="tab-content">
+		
+		
+		<!-- Popularne -->
               <div id="mostPopular" class="tab-pane fade in active" role="tabpanel">
                 <ul class="small_catg popular_catg wow fadeInDown">
                   <li>
                     <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
                       <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                        <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_wyswietlenia[0][0]; ?>"><?php echo $newsy_wyswietlenia[0][3]; ?></a></h4>
+                        <p><?php echo $newsy_wyswietlenia[0][4]; ?></p>
                       </div>
                     </div>
                   </li>
-                  <li>
+		  
+		  <li>
                     <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
                       <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                        <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_wyswietlenia[1][0]; ?>"><?php echo $newsy_wyswietlenia[1][3]; ?></a></h4>
+                        <p><?php echo $newsy_wyswietlenia[1][4]; ?></p>
                       </div>
                     </div>
                   </li>
-                  <li>
+		  
+		  <li>
                     <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
                       <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra </p>
+                        <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_wyswietlenia[2][0]; ?>"><?php echo $newsy_wyswietlenia[2][3]; ?></a></h4>
+                        <p><?php echo $newsy_wyswietlenia[2][4]; ?></p>
                       </div>
                     </div>
                   </li>
+		  
+		  
                 </ul>
               </div>
+		
+		
+		<!-- Ostatnio czytane -->
               <div id="recentComent" class="tab-pane fade" role="tabpanel">
                 <ul class="small_catg popular_catg">
                   <li>
