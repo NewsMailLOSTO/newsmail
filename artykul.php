@@ -18,7 +18,7 @@
     } else {
 	echo '<div class="notif-warning">' . mysql_error() . '</div>';
     }    
-    echo '<div class="notif-info">' .time() . '</div>';
+    //echo '<div class="notif-info">' .time() . '</div>';
 ?>
 <div class="col-lg-8 col-md-8">
     <div class="content_bottom_left">

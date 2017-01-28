@@ -8,7 +8,7 @@
 					<?php
 						for($i = 0; $i < count($kategorie); $i++){
 							echo '<li>';
-							echo '<h4 class="media-heading"><a href="?id=' . $kategorie[$i][0] . '">' . $kategorie[$i][1] . '</a></h4>';	
+							echo '<h4 class="media-heading"><a href="kategoria.php?id=' . $kategorie[$i][0] . '">' . $kategorie[$i][1] . '</a></h4>';	
 							echo '</li>';
 						}
 					?>
