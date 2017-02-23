@@ -26,9 +26,14 @@
 		</tr></td>
 
 		<tr><td class="tablab">Wstęp:</td><td> <input type='text' name='wstep' id='wstep' placeholder='Wstęp'/></td></tr>
-	<!--	<tr><td>Treść:</td><td> <input type='text' name='tresc' id='tresc' placeholder='Treść' maxlength="64"/></td></tr>   -->
 		<tr><td class="tablab">Treść:</td><td> <textarea name='tresc' id='tresc' placeholder='Treść'/></textarea></td></tr>
-
+		
+		<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'tresc' );
+		</script>
+		
 		</table>
 
 		<br />

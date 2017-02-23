@@ -17,7 +17,8 @@
     $query_Recordset1 = "SELECT news.* , kat_newsow.* "
 	    . "FROM `kat_newsow` "
 	    . "LEFT JOIN `news` ON news.id_kat_newsow = kat_newsow.id_kat_newsow "
-	    . "WHERE kat_newsow.id_kat_newsow = " . $kat_id;
+	    . "WHERE kat_newsow.id_kat_newsow = " . $kat_id. " "
+	    . "ORDER BY data DESC";
     $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
     $Recordset1 = mysql_query($query_limit_Recordset1, $db);
     if ($Recordset1) {

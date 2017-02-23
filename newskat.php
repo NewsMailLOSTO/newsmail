@@ -52,7 +52,7 @@
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
 	
-	echo $newsy[1][2];
+	//echo $newsy[1][2];
 	
 	
 	//--------------------------------------------------------------------------

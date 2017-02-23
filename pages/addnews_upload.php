@@ -22,7 +22,7 @@
 	$mojerror = $mojerror . 'Nie wpisałeś wstępu <br/>';
     }
 
-    $tresc = htmlspecialchars($_POST['tresc']);
+    $tresc = addslashes($_POST['tresc']);
     if (empty($tresc)) {
 	$mojerror = $mojerror . 'Nie wpisałeś treści <br/>';
     }
