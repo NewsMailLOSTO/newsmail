@@ -50,7 +50,10 @@
 	echo '</div>';
     } else {
 
-	echo ' <a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
+	
+	echo '<div class="notif-error">';
+		echo ' <a href="' . $krowa . 'pages/addnews.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
+		echo '</div>';
     }
 }
 

@@ -37,18 +37,16 @@
             <li><a href="<?php echo $krowa;?>rejestracja.php">Rejestracja</a></li>
             <li><a href="<?php echo $krowa;?>login.php">Login</a></li>
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
-            
-            <li><a href="<?php echo $krowa;?>logout.php">Logout</a></li>
-            
+       
 	    
 		<div class="header_top_right">
                     <ul class="nav navbar-nav custom_nav" >
-                        <ul class="">
-			
-                        <li><a href="pages/admin.php">  </a> <?php echo print_r($_SESSION['email']); ?></li>
-                           
                         
-                        </ul>
+			
+                        <li><a href="pages/admin.php"> <?php echo print_r($_SESSION['email']); ?> </a> </li>
+                        <li><a href="<?php echo $krowa;?>logout.php">Logout</a></li>   
+                        
+                       
 		   </ul>
 		</div>
 	    
