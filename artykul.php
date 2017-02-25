@@ -13,6 +13,12 @@
     } else {
 	echo '<div class="notif-warning">' . mysql_error() . '</div>';
     }    
+    $query = mysql_query("UPDATE news SET wyswietlenia = wyswietlenia + 1, ostatnio_czytane = '" . time() . "' WHERE id_news = " . $news_id, $db);
+    if ($query) {
+    } else {
+	echo '<div class="notif-warning">' . mysql_error() . '</div>';
+    }    
+    //echo '<div class="notif-info">' .time() . '</div>';
 ?>
 <div class="col-lg-8 col-md-8">
     <div class="content_bottom_left">
@@ -23,7 +29,7 @@
 		<ul class="fashion_catgnav">
 		    <li>
 			<div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $news_id ?>"><img alt="" src="images/390x240x1.jpg"></a> </div>
-			<div class="comments_box"> <span class="meta_date"><?php echo $row['data']; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> <span class="meta_more"><a  href="#">Read More...</a></span> 
+			<div class="comments_box"> <span class="meta_date"><?php echo $row['data']; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> 
 			    <h4><?php echo $row['wstep']; ?></h4>
 			    <p><?php echo $row['tresc']; ?></p>
 			</div>

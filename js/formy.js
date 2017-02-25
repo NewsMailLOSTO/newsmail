@@ -2,6 +2,8 @@
     function sprawdz_formularz()
     {
         var f=document.forms['form1'];
+        var haslo = document.getElementById("haslo").value;
+        var haslo2 = document.getElementById("haslo2").value;
         
         if(f.imie.value == '')
         {
@@ -28,6 +30,11 @@
                 return false;
                 
             }
+        }
+        if(haslo != haslo2){
+            
+            alert('Hasła się nie zgadzają');
+            return false;
         }
          if(f.aktywny.value != '0' && f.aktywny.value !='1')
         {

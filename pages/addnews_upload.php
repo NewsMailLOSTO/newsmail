@@ -22,7 +22,7 @@
 	$mojerror = $mojerror . 'Nie wpisałeś wstępu <br/>';
     }
 
-    $tresc = htmlspecialchars($_POST['tresc']);
+    $tresc = addslashes($_POST['tresc']);
     if (empty($tresc)) {
 	$mojerror = $mojerror . 'Nie wpisałeś treści <br/>';
     }
@@ -32,11 +32,11 @@
 	$mojerror = $mojerror . 'Nie wybrałeś kategorii<br/>';
     }      
 	
-	$data = date("Y-m-d H:i:s");
+	$data = date("Y-m-d H:i");
 	
     if (empty($mojerror)) {
 	mysql_select_db($db_database, $db_dodaj);
-	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '')";
+	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '', '', '')";
 	if (mysql_query($sql, $db_dodaj)) {
 	   	    echo '<div class="notif-success">Dodano</div>';
 

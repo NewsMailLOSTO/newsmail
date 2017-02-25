@@ -7,7 +7,7 @@ $temat= htmlspecialchars(trim($_POST['temat']));
 $wiadomosc= htmlspecialchars(trim($_POST['wiadomosc']));
 $send= $_POST['send'];
 
-$odbiorca = "starwars.maciek@gmail.com";
+$odbiorca = "dajspama@gmail.com";
 $kom = "";
 $header= "Content-type: text/html; charset=utf-8\r\n Nadawca:$email";
 $ip = $_SERVER['REMOTE_ADDR'];

@@ -3,6 +3,8 @@
   <div id="status">&nbsp;</div>
 </div>
 -->
+
+
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <div class="container">
   <header id="header">
@@ -10,7 +12,7 @@
       <div class="col-lg-12 col-md-12">
         <div class="header_bottom">
           <div class="header_bottom_left"><a class="logo" href="<?php echo $krowa;?>index.php">News<strong>MAIL</strong> <span>Serwis newsów</span></a></div>
-          <div class="header_bottom_right"><a href="#"><img src="<?php echo $krowa;?>images/logo.png" alt=""></a></div>
+         
         </div>
       </div>
     </div>
@@ -33,15 +35,21 @@
               </ul>
             </li>-->
             <li><a href="<?php echo $krowa;?>rejestracja.php">Rejestracja</a></li>
-            <li><a href="<?php echo $krowa;?>pages/login.php">Login</a></li>
+            <li><a href="<?php echo $krowa;?>login.php">Login</a></li>
             <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
+            
+            <li><a href="<?php echo $krowa;?>logout.php">Logout</a></li>
+            
 	    
 		<div class="header_top_right">
+                    <ul class="nav navbar-nav custom_nav" >
+                        <ul class="">
 			
-		    <form action="#" class="search_form">
-			<input type="text" placeholder="Text to Search">
-			<input type="submit" value="">
-		    </form>
+                        <li><a href="pages/admin.php">  </a> <?php echo print_r($_SESSION['email']); ?></li>
+                           
+                        
+                        </ul>
+		   </ul>
 		</div>
 	    
           </ul>
