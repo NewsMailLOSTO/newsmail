@@ -9,7 +9,7 @@
                 <li>
 		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><img alt="" src="images/390x240x1.jpg"></a> </div>
                   <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><?php echo $newsy[0][3]; ?></a></h2>
-                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?></span> <span class="meta_comment"><a href="#"><?php echo $newsy[0][3]; ?></a></span> 
+                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?><</span> <span class="meta_comment"><a href="#"><?php echo $newsy[0][3]; ?></a></span> 
 		    <p><?php echo $newsy[0][4]; ?></p>
 		  </div>
                   
@@ -22,7 +22,7 @@
                   <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><?php echo $newsy[1][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[1][1]; ?></span> <span class="meta_comment"><a href="#"><?php echo $newsy[1][3]; ?></a></span> </div>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[1][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
@@ -30,7 +30,7 @@
                   <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[2][0]; ?> "><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[2][0]; ?>"><?php echo $newsy[2][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[2][1]; ?></span> <span class="meta_comment"><a href="#"><?php echo $newsy[2][3]; ?></a></span> </div>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[2][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
@@ -38,7 +38,7 @@
                   <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><?php echo $newsy[3][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[3][1]; ?></span> <span class="meta_comment"><a href="#"><?php echo $newsy[3][3]; ?></a></span> </div>
+                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[3][1]; ?></span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
                     </div>
                   </div>
                 </li>
