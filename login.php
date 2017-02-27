@@ -3,12 +3,12 @@ include('head.php');
 include('top.php');
 include('db.php');
 
-echo '<h3>Sign in</h3>';
+echo '<h3>Logowanie</h3>';
 
 //first, check if the user is already signed in. If that is the case, there is no need to display this page
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 {
-    echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+    echo 'Jesteś już zalogowany.';
 }
 else
 {
@@ -17,9 +17,9 @@ else
         /*the form hasn't been posted yet, display it
           note that the action="" will cause the form to post to the same page it is on */
         echo '<form method="post" action="">
-            Email: <input type="text" name="email" />
-            Password: <input type="password" name="haslo">
-            <input type="submit" value="Sign in" />
+            Nazwa użytkownika: <input type="text" name="imie" />
+            Hasło: <input type="password" name="haslo">
+            <input type="submit" value="Zaloguj" />
          </form>';
     }
     else
@@ -31,19 +31,19 @@ else
         */
         $errors = array(); /* declare the array for later use */
          
-        if(!isset($_POST['email']))
+        if(!isset($_POST['imie']))
         {
-            $errors[] = 'The username field must not be empty.';
+            $errors[] = 'Nazwa użytkownika nie może być pusta.';
         }
          
         if(!isset($_POST['haslo']))
         {
-            $errors[] = 'The password field must not be empty.';
+            $errors[] = 'Hasło nie może być puste.';
         }
          
         if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
         {
-            echo 'Uh-oh.. a couple of fields are not filled in correctly..';
+            echo 'Coś popsułeś przy wypełnianiu pól.';
             echo '<ul>';
             foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
             {
@@ -58,12 +58,12 @@ else
             //also notice the sha1 function which hashes the password
             $sql = "SELECT 
                         id_user,
-                        email,
+                        imie,
                         kat_uzytkownikow
                     FROM
                         user
                     WHERE
-                        email= '" . mysql_real_escape_string($_POST['email']) . "'
+                        imie= '" . mysql_real_escape_string($_POST['imie']) . "'
                     AND
                         haslo = '" . sha1($_POST['haslo']) . "'";
                          
@@ -92,12 +92,12 @@ else
                     while($row = mysql_fetch_assoc($result))
                     {
                         $_SESSION['id_user']    = $row['id_user'];
-                        $_SESSION['email']  = $row['email'];
+                        $_SESSION['imie']  = $row['imie'];
                         $_SESSION['kat_uzytkownikow'] = $row['kat_uzytkownikow'];
                     }
-                    echo 'Welcome, ' . $_SESSION['email'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+                    echo 'Witaj, ' . $_SESSION['imie'] . '. <a href="index.php">Tu masz stronę</a>.';
                     
-                    echo print_r($_SESSION['email']);
+                    echo print_r($_SESSION['imie']);
                 }
             }
         }

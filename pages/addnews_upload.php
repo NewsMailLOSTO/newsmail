@@ -7,7 +7,8 @@
     echo('<div class="col-lg-8 col-md-8">');
 	
     if (isset($_POST['btn-upload'])) {
-	$redaktor = htmlspecialchars($_POST['redaktor']);
+	//$redaktor = htmlspecialchars($_POST['redaktor']);
+	$redaktor = $_SESSION["id_user"];
     if (empty($redaktor)) {
 	$mojerror = 'Nie wpisałeś redaktora <br/>';
     }

@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 header('content-type: text/html; charset=utf-8');
 
 // checking lang value
@@ -12,14 +12,14 @@ if(isset($_COOKIE['sy_lang'])) {
 // including lang files
 switch ($load_lang_code) {
     case "en":
-        require(__DIR__ . '/lang/en.php');
+        require(dirname(__FILE__) . '/lang/en.php');
         break;
     case "pl":
-        require(__DIR__ . '/lang/pl.php');
+        require(dirname(__FILE__) . '/lang/pl.php');
         break;
 }
 
-require(__DIR__ . "/pluginconfig.php");
+require(dirname(__FILE__) . "/pluginconfig.php");
 
 $tmpusername = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $tmppassword = md5(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
@@ -35,3 +35,4 @@ if($tmpusername == $username and $password == $tmppassword) {
         </script>
     ';
 }
+

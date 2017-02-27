@@ -3,7 +3,7 @@
 // Copyright (c) 2015, Fujana Solutions - Moritz Maleck. All rights reserved.
 // For licensing, see LICENSE.md
 
-session_start();
+////session_start();
 
 if(!isset($_SESSION['username'])) {
     exit;
@@ -19,15 +19,15 @@ if(isset($_COOKIE['sy_lang'])) {
 // including lang files
 switch ($load_lang_code) {
     case "en":
-        require(__DIR__ . '/lang/en.php');
+        require(dirname(__FILE__) . '/lang/en.php');
         break;
     case "pl":
-        require(__DIR__ . '/lang/pl.php');
+        require(dirname(__FILE__) . '/lang/pl.php');
         break;
 }
 
 // Including the plugin config file, don't delete the following row!
-require(__DIR__ . '/pluginconfig.php');
+require(dirname(__FILE__) . '/pluginconfig.php');
 
 $info = pathinfo($_FILES["upload"]["name"]);
 $ext = $info['extension'];

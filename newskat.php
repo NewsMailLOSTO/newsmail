@@ -13,7 +13,12 @@
     $startRow_Recordset1 = $pageNum_Recordset1 * $maxRows_Recordset1;
 
     mysql_select_db($db_database, $db) or die(mysql_error($db));
-    $query_Recordset1 = "SELECT * FROM news ORDER BY data DESC";
+    $query_Recordset1 = "SELECT news.* , kat_newsow.*, user.id_user, user.imie "
+	    . "FROM `news` "
+	    . "LEFT JOIN `kat_newsow` ON news.id_kat_newsow = kat_newsow.id_kat_newsow "
+	    . "LEFT JOIN `user` ON news.redaktor = user.id_user "
+	    //. "WHERE kat_newsow.id_kat_newsow = " . $kat_id. " "
+	    . "ORDER BY data DESC";
     $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
     $Recordset1 = mysql_query($query_limit_Recordset1, $db);
     if ($Recordset1) {
@@ -48,6 +53,8 @@
 		$newsy_kolumny[7] = $row_Recordset1['id_ocena'];
 		$newsy_kolumny[8] = $row_Recordset1['wyswietlenia'];
 		$newsy_kolumny[9] = $row_Recordset1['ostatnio_czytane'];
+		$newsy_kolumny[10] = $row_Recordset1['nazwa_kategorii'];
+		$newsy_kolumny[11] = $row_Recordset1['imie'];
 		$newsy[] = $newsy_kolumny;
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));

@@ -2,16 +2,18 @@
     include ('../head.php');
     include ('../top.php');
     include ('adminlewy.php');
-   
+  
+    
+    
 ?>
 
 
 <div class="col-lg-8 col-md-8">
-    <!--<p id="message"></p>-->
+    <!--<div class="notif-info"> <?php echo $redaktor; ?> </div>-->
 	<form action="addnews_upload.php" method="post" name="form1" id="form1" onsubmit="return sprawdz_formularz()" oninput="return sprawdz_formularz()">
 		<table class="kupa">
-		    <tr><td class="tablab">Redaktor:</td><td> <input type='text' name='redaktor' id='redaktor' placeholder='Redaktor' maxlength="32"/> </td> <td rowspan="6" id="message"></td> </tr>
-		<tr><td class="tablab">Tytuł:</td><td> <input type='text' name='tytul' id='tytul' placeholder='Tytuł' maxlength="128"/></td></tr>
+		    <tr><td class="tablab">Redaktor:</td><td> <?php echo $_SESSION['imie']; ?> </td> <td rowspan="6" id="message"></td> </tr>
+		    <tr><td class="tablab">Tytuł:</td><td> <input type='text' name='tytul' id='tytul' placeholder='Tytuł' maxlength="128"/></td></tr>
 
 		<tr><td class="tablab">Kategoria:</td><td>
 			<select name="kategoria" id="kategoria">
@@ -35,13 +37,15 @@
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'tresc', {
-		    filebrowserBrowseUrl: '<?php echo $krowa;?>ckeditor/plugins/imageuploader/imgbrowser.php',
-		    filebrowserUploadUrl: '<?php echo $krowa;?>ckeditor/plugins/imageuploader/imgbrowser.php'
+		    extraPlugins: 'imageuploader'
+		    //filebrowserBrowseUrl: '<?php echo $krowa;?>ckeditor/plugins/imageuploader/imgbrowser.php',
+		    //filebrowserUploadUrl: '<?php echo $krowa;?>ckeditor/plugins/imageuploader/imgbrowser.php'
+		    
 		});
 		</script>
 		
 		</table>
-
+ 
 		<br />
 		<br />
 		<center><div id="rej-button">

@@ -43,7 +43,7 @@
                     <ul class="nav navbar-nav custom_nav" >
                         
 			
-                        <li><a href="pages/admin.php"> <?php echo print_r($_SESSION['email']); ?> </a> </li>
+                        <li><a href="pages/admin.php"> <?php echo $_SESSION['imie']; ?> </a> </li>
                         <li><a href="<?php echo $krowa;?>logout.php">Logout</a></li>   
                         
                        

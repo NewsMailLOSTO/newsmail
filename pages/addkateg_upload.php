@@ -27,7 +27,7 @@
 	echo '</div>';
     } else {
 
-	echo ' <a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
+	echo ' <a href="' . $krowa . 'pages/addkateg.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
     }
 }
 

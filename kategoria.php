@@ -14,9 +14,10 @@
     $startRow_Recordset1 = $pageNum_Recordset1 * $maxRows_Recordset1;
 
     mysql_select_db($db_database, $db) or die(mysql_error($db));
-    $query_Recordset1 = "SELECT news.* , kat_newsow.* "
+    $query_Recordset1 = "SELECT news.* , kat_newsow.*, user.id_user, user.imie "
 	    . "FROM `kat_newsow` "
 	    . "LEFT JOIN `news` ON news.id_kat_newsow = kat_newsow.id_kat_newsow "
+	    . "LEFT JOIN `user` ON news.redaktor = user.id_user "
 	    . "WHERE kat_newsow.id_kat_newsow = " . $kat_id. " "
 	    . "ORDER BY data DESC";
     $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
@@ -48,15 +49,19 @@
 	do {
 	    
 	    if ($row_Recordset1['id_kat_newsow'] >= $totalRows_Recordset1) {
-				
-		 echo '<li>';
-		   echo '<div class="catgimg2_container"> <a href="artykul.php?id=' . $row_Recordset1['id_news'] . '"><img alt="" src="images/390x240x1.jpg"></a> </div>';
-		   echo '<h2 class="catg_titile"><a href="artykul.php?id=' . $row_Recordset1['id_news'] . '">' . $row_Recordset1['tytul'] . '</a></h2>';
-		   echo '<div class="comments_box"> <span class="meta_date">' . $row_Recordset1['data'] . '</span> <span class="meta_comment"><a href="#">' . $row_Recordset1['nazwa_kategorii'] . '</a></span>';
-		   echo '<p>' . $row_Recordset1['wstep'] . '</p>';
+			if($row_Recordset1["id_news"] == NULL){
+			echo '<div class=notif-info> Brak newsów </div>';
+		     break;
+			}	
+		 echo '<li><table>';
+		   echo '<tr><td width="50%">  <div class="catgimg2_container"> <a href="artykul.php?id=' . $row_Recordset1['id_news'] . '"><img alt="" src="images/390x240x1.jpg"></a> </div>  </td>';
+		   echo '<td>  <h2 class="catg_titile"><a href="artykul.php?id=' . $row_Recordset1['id_news'] . '">' . $row_Recordset1['tytul'] . '</a></h2>  ';
+		   echo '<div class="comments_box"> <span class="meta_date">' . $row_Recordset1['data'] . '</span> <span class="meta_comment"><a href="#">' . $row_Recordset1['nazwa_kategorii'] . '</a></span><span class="meta_more"> ' . $row_Recordset1['imie'] . ' </span>';
+		   echo '<p>' . $row_Recordset1['wstep'] . '</p></td></tr>';
+		   //echo '<div class=notif-info>' . $row_Recordset1["id_news"] . '</br>' . var_dump($row_Recordset1["id_news"]) . '</div>';
 		   echo '</div>';
 
-		echo '</li>';
+		echo '</table></li>';
 		
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));

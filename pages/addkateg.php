@@ -13,10 +13,11 @@
 		</table>
 		<center><div id="rej-button">
 		<button type='submit' name='btn-upload'>Dodaj</button>
+		<p id="message"></p>
 		<div/></center>
 	</form>
 </div>
- <script type="text/javascript" src="<?php echo $krowa;?>js/formy.js"></script>
+ <script type="text/javascript" src="<?php echo $krowa;?>js/formy_kateg.js"></script>
  
  <?php
     include('../foot.php');

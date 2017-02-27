@@ -3,6 +3,7 @@
     {
         var f=document.forms['form1'];
 	var myerror = '';
+	/*
 	if(f.redaktor.value == '')
         {
             //alert('Musisz wpisać redaktora!');
@@ -19,6 +20,7 @@
 
 	       }
         }
+	*/
         if(f.tytul.value == '')
         {
             //alert('Musisz wpisać tytuł!');
