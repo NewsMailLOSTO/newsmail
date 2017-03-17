@@ -5,10 +5,25 @@
 	    <div class="single_bottom_rightbar">
 		<h2>Nawigacja</h2>
 		<ul class="small_catg popular_catg wow fadeInDown">
-		    <li><h4 class="media-heading"><a href="addnews.php">Dodaj news </a></h4></li>
-		    <li><h4 class="media-heading"><a href="#">Remove </a></h4></li>
-		    <li><h4 class="media-heading"><a href="allnews.php">Wszystkie newsy </a></h4></li>
-		    <li><h4 class="media-heading"><a href="addkateg.php">Dodaj kategorię </a></h4></li>
+		    <?php 
+			if ($_SESSION['kat_uzytkownikow'] == 1 || $_SESSION['kat_uzytkownikow'] == 2){
+			    //echo '<div class="notif-info"> Jesteś ' . $_SESSION['kat_uzytkownikow'] . '</div>';
+			    echo '<li><h4 class="media-heading"><a href="addnews.php">Dodaj news </a></h4></li>';
+			    echo '<li><h4 class="media-heading"><a href="allnews.php">Wszystkie newsy </a></h4></li>';
+			    echo '<li><h4 class="media-heading"><a href="addkateg.php">Dodaj kategorię </a></h4></li>';
+			    echo '<li><h4 class="media-heading"><a href="allkateg.php">Wszystkie kategorie </a></h4></li>';
+			    if ($_SESSION['kat_uzytkownikow'] == 1){
+				echo '<li><h4 class="media-heading"><a href="allusers.php">Wszyscy użytkownicy </a></h4></li>';
+			    } 
+			    
+			}			
+			else{
+			    
+			}
+			
+		    ?>
+		    
+		    
 		</ul>
 	    </div>
 	    

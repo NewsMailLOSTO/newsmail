@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $krowa;?>assets/css/theme.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $krowa;?>assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-<script src="<?php echo $krowa;?>ckeditor/ckeditor.js"></script>
+<script src="<?php echo $krowa;?>js/ckeditor/ckeditor.js"></script>
 <!--[if lt IE 9]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>

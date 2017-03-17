@@ -23,7 +23,7 @@
 	$mojerror = $mojerror . 'Nie wpisałeś wstępu <br/>';
     }
 
-    $tresc = addslashes($_POST['tresc']);
+    $tresc = ($_POST['tresc']);
     if (empty($tresc)) {
 	$mojerror = $mojerror . 'Nie wpisałeś treści <br/>';
     }
@@ -31,13 +31,27 @@
     $kategoria = ($_POST['kategoria']);
     if (empty($kategoria)) {
 	$mojerror = $mojerror . 'Nie wybrałeś kategorii<br/>';
-    }      
+    }
+    
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . 'newsmail/images/news/';
+    $target_file = $target_dir . basename($_FILES['obrazek']['name']);
+    if($_FILES['obrazek']['size'] == 0){
+	$obrazek = $target_dir . 'newsmail.png';
+    }
+    else{
+	if(move_uploaded_file($_FILES['obrazek']['tmp_name'],$target_file)){
+	    $obrazek = $target_file;
+	}
+	else{
+	    $mojerror = $mojerror . 'Błąd obrazka<br/>';
+	}
+    }
 	
-	$data = date("Y-m-d H:i");
+	$data = date("Y-m-d H:i:s");
 	
     if (empty($mojerror)) {
 	mysql_select_db($db_database, $db_dodaj);
-	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '', '', '')";
+	$sql = "INSERT INTO news VALUES ('','$data', '$redaktor', '$tytul', '$wstep','$tresc', '$kategoria', '', '', '','$obrazek')";
 	if (mysql_query($sql, $db_dodaj)) {
 	   	    echo '<div class="notif-success">Dodano</div>';
 

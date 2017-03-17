@@ -7,9 +7,15 @@
             <div class="business_category_left wow fadeInDown">
               <ul class="fashion_catgnav">
                 <li>
-		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><img alt="" src="images/390x240x1.jpg"></a> </div>
-                  <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><?php echo $newsy[0][3]; ?></a></h2>
-                  <div class="comments_box"> <span class="meta_date"><?php echo $newsy[0][1]; ?></span> <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[0][6] . '">' . $newsy[0][10]; ?></a></span><span class="meta_more"><?php echo $newsy[0][11];  ?></span>  
+		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy[0][0]; ?>">
+			<img alt="" src="<?php echo $newsy[0][15]; ?>"></a> </div>
+		    <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy[0][0]; ?>"><?php echo $newsy[0][3]; ?></a></h2>
+                  <div class="comments_box"> 
+		      <span class="meta_date"><?php echo $newsy[0][1]; ?></span> 
+		      <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[0][6] . '">' . $newsy[0][10]; ?></a></span>
+		      <span class="meta_more"><?php echo $newsy[0][11];  ?></span>  
+		      <span class="meta_views"><?php echo $newsy[0][12];  ?></span> 
+		      <span class="meta_rating"><?php echo $newsy[0][13];  ?></span> 
 		    <p><?php echo $newsy[0][4]; ?></p>
 		  </div>
                   
@@ -19,26 +25,45 @@
             <div class="business_category_right wow fadeInDown">
               <ul class="small_catg">
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><img src="<?php echo $newsy[1][15]; ?>" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[1][0]; ?>"><?php echo $newsy[1][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[1][1]; ?></span> <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[1][6] . '">' . $newsy[1][10]; ?></a></span> <span class="meta_more"><?php echo $newsy[1][11];  ?></span> </div>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy[1][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[1][6] . '">' . $newsy[1][10]; ?></a></span> 
+			  <span class="meta_more"><?php echo $newsy[1][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy[1][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy[1][13];  ?></span> 
+			  
+		      </div>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[2][0]; ?> "><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[2][0]; ?> "><img src="<?php echo $newsy[2][15]; ?>" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[2][0]; ?>"><?php echo $newsy[2][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[2][1]; ?></span> <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[2][6] . '">' . $newsy[2][10]; ?></a></span> <span class="meta_more"><?php echo $newsy[2][11];  ?></span> </div>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy[2][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[2][6] . '">' . $newsy[2][10]; ?></a></span> 
+			  <span class="meta_more"><?php echo $newsy[2][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy[2][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy[2][13];  ?></span>
+		      </div>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><img src="images/112x112.jpg" alt=""></a>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><img src="<?php echo $newsy[3][15]; ?>" alt=""></a>
                     <div class="media-body">
                       <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy[3][0]; ?>"><?php echo $newsy[3][3]; ?></a></h4>
-                      <div class="comments_box"> <span class="meta_date"><?php echo $newsy[3][1]; ?></span> <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[3][6] . '">' . $newsy[3][10]; ?></a></span> <span class="meta_more"><?php echo $newsy[3][11];  ?></span> </div>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy[3][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy[3][6] . '">' . $newsy[3][10]; ?></a></span>
+			  <span class="meta_more"><?php echo $newsy[3][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy[3][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy[3][13];  ?></span>
+		      </div>
                     </div>
                   </div>
                 </li>
@@ -47,47 +72,71 @@
           </div>
 	    
 	  <!-- Ostatnio oceniane -->  
-          <div class="technology_catrarea">
-            <div class="single_category">
-              <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <a class="title_text" href="#">Ostatnio oceniane</a> </h2>
-              <div class="business_category_left">
-                <ul class="fashion_catgnav wow fadeInDown">
-                  <li>
-                    <div class="catgimg2_container"> <a href="#"><img alt="" src="images/390x240x1.jpg"></a> </div>
-                    <h2 class="catg_titile"><a href="#">Aenean mollis metus sit amet ligula adipiscing</a></h2>
-                    <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> <span class="meta_more"><a  href="#">Read More...</a></span> </div>
-                    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla...</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="business_category_right">
-                <ul class="small_catg wow fadeInDown">
-                  <li>
-                    <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
-                      <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
-                      </div>
+	  <div class="single_category wow fadeInDown">
+            <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <a class="title_text" href="#">Ostatnio oceniane</a> </h2>
+            <div class="business_category_left wow fadeInDown">
+              <ul class="fashion_catgnav">
+                <li>
+		    <div class="catgimg2_container"> <a href="artykul.php?id=<?php echo $newsy_oceniane[0][0]; ?>"><img alt="" src="<?php echo $newsy_oceniane[0][15]; ?>"></a> </div>
+                  <h2 class="catg_titile"><a href="artykul.php?id=<?php echo $newsy_oceniane[0][0]; ?>"><?php echo $newsy_oceniane[0][3]; ?></a></h2>
+                  <div class="comments_box"> 
+		      <span class="meta_date"><?php echo $newsy_oceniane[0][1]; ?></span> 
+		      <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy_oceniane[0][6] . '">' . $newsy_oceniane[0][10]; ?></a></span>
+		      <span class="meta_more"><?php echo $newsy_oceniane[0][11];  ?></span>  
+		      <span class="meta_views"><?php echo $newsy_oceniane[0][12];  ?></span> 
+		      <span class="meta_rating"><?php echo $newsy_oceniane[0][13];  ?></span> 
+		    <p><?php echo $newsy_oceniane[0][4]; ?></p>
+		  </div>
+                  
+                </li>
+              </ul>
+            </div>
+            <div class="business_category_right wow fadeInDown">
+              <ul class="small_catg">
+                <li>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy_oceniane[1][0]; ?>"><img src="<?php echo $newsy_oceniane[1][15]; ?>" alt=""></a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_oceniane[1][0]; ?>"><?php echo $newsy_oceniane[1][3]; ?></a></h4>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy_oceniane[1][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy_oceniane[1][6] . '">' . $newsy_oceniane[1][10]; ?></a></span> 
+			  <span class="meta_more"><?php echo $newsy_oceniane[1][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy_oceniane[1][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy_oceniane[1][13];  ?></span> 
+			  
+		      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
-                      <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
-                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy_oceniane[2][0]; ?> "><img src="<?php echo $newsy_oceniane[2][15]; ?>" alt=""></a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_oceniane[2][0]; ?>"><?php echo $newsy_oceniane[2][3]; ?></a></h4>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy_oceniane[2][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy_oceniane[2][6] . '">' . $newsy_oceniane[2][10]; ?></a></span> 
+			  <span class="meta_more"><?php echo $newsy_oceniane[2][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy_oceniane[2][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy_oceniane[2][13];  ?></span>
+		      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown"> <a class="media-left" href="#"><img src="images/112x112.jpg" alt=""></a>
-                      <div class="media-body">
-                        <h4 class="media-heading"><a href="#">Duis condimentum nunc pretium lobortis </a></h4>
-                        <div class="comments_box"> <span class="meta_date">14/12/2045</span> <span class="meta_comment"><a href="#">No Comments</a></span> </div>
-                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a class="media-left" href="artykul.php?id=<?php echo $newsy_oceniane[3][0]; ?>"><img src="<?php echo $newsy_oceniane[3][15]; ?>" alt=""></a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="artykul.php?id=<?php echo $newsy_oceniane[3][0]; ?>"><?php echo $newsy_oceniane[3][3]; ?></a></h4>
+                      <div class="comments_box"> 
+			  <span class="meta_date"><?php echo $newsy_oceniane[3][1]; ?></span> 
+			  <span class="meta_comment"><a href=<?php echo '"' . $krowa . 'kategoria.php?id=' . $newsy_oceniane[3][6] . '">' . $newsy_oceniane[3][10]; ?></a></span>
+			  <span class="meta_more"><?php echo $newsy_oceniane[3][11];  ?></span> 
+			  <span class="meta_views"><?php echo $newsy_oceniane[3][12];  ?></span> 
+			  <span class="meta_rating"><?php echo $newsy_oceniane[3][13];  ?></span>
+		      </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

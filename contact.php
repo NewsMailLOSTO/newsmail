@@ -1,48 +1,23 @@
 <?php 
-include('head.php');
- include('top.php');
-$imie= htmlspecialchars(trim($_POST['imie']));
-$email=htmlspecialchars(trim($_POST['email']));
-$temat= htmlspecialchars(trim($_POST['temat']));
-$wiadomosc= htmlspecialchars(trim($_POST['wiadomosc']));
-$send= $_POST['send'];
-
-$odbiorca = "dajspama@gmail.com";
-$kom = "";
-$header= "Content-type: text/html; charset=utf-8\r\n Nadawca:$email";
-$ip = $_SERVER['REMOTE_ADDR'];
-$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-$data=date("Y-m-d");
-$czas=date("H:i");
-$error="";
-
-if(empty($error)){
-    $list= "Wiadomosc od: $imie ($mail) z komputera $host o IP $ip dnia $data o godz: $czas Wiadomosc : <br> $wiadomosc";
-    
-    
+include ('db.php');
+if( isset( $_POST['btn-upload'] ) ){
+    $email    = htmlspecialchars($_POST['email']); 
 }
-if(mail($odbiorca,$temat,$list,$mail)){
-    $error = "<center><b>Twoja wiadomość została wysłana </b> </center><br />"; $kom= "";
-    
-    
-}
-else{
-    $error="<center><b>Wystąpił błąð podczas wysyłania wiadomość, spróbuj później </b> </center><br />";
-}
-?>
-<form action="" method="post" name="form2" id="form2" >
-    
-            <p>Imię i nazwisko: <input type='text' name='imie' id='imie' placeholder='Imię i nazwisko' maxlength="16"/></p>
-            <p>Twój Email: <input type='text' name='email' id='email' placeholder='Twój Email' maxlength="64"/></p>
-             <p> Temat <input type='text' name='temat' id='temat' placeholder='Temat' maxlength="32"/></p>
-             <p>Wiadomosc <textarea  name='wiadomosc' id='wiadomosc' cols="40" rows="10" placeholder='Treść' maxlength="64"/></textarea></p>
-            <input type='submit' value="Wyślij" id="send" name='send'/>
-            
-        </form>
+mysql_select_db($db_database, $db_dodaj);
+$sql=mysql_query("SELECT kod FROM user WHERE email='" . $email ."'");
+$row = mysql_fetch_assoc($sql);
+$kod = $row['kod'];
+echo '<div class=notif-info">' . $kod . '</div>';
+$esquel=mysql_query("SELECT id_user FROM user WHERE email='" . $email ."'");
+$rov = mysql_fetch_assoc($esquel);
+$id = $rov['id_user'];
+echo '<div class=notif-info">' . $id . '</div>';
+
+$temat= htmlspecialchars(trim('Losto.aktywacja'));
+$wiadomosc= ('Wysłano Ci śmiertelniku link aktywacyjny do Twego konta na Newsmailu, kliknij kod jeśli zakładałeś konto: <a href="http://www.losto.net/newsmail/aktywacja.php?code='.$kod.'&id='.$id.'"> Kliknij tutaj </a>');
+mail($email,$temat,$wiadomosc);
 
 
-<?php 
-include ('foot.php');
 
 
 ?>

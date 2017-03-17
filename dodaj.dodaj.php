@@ -20,19 +20,27 @@ if( isset( $_POST['btn-upload'] ) ){
    $kategoria=3;
     if(empty($mojerror)){    
     mysql_select_db($db_database, $db_dodaj);
-    $sql="INSERT INTO user VALUES ('','$imie', '$email', SHA1('$haslo'), '$kategoria', '$aktywny')";
+    $data=date('Y-m-d H:i:s');
+    $kod=SHA1($email.$data);
+
+    
+    
+    $sql="INSERT INTO user VALUES ('','$imie', '$email', SHA1('$haslo'), '$kategoria', '$aktywny', '$kod','$data')";
+    
     if(mysql_query($sql, $db_dodaj))
     {
-      echo '<div class="notif-success"> Dodałem </div>';   
+      echo '<div id="rej"> "Dodałem" </div>';   
     }else{
     
-       echo '<div class=notif-error> Nie poszło </div>';
+       echo '<div id=rej2> "Nie poszło" </div>';
     }
     echo '</div>';
     }
     else{    
-    echo ' <div class=notif-error><a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a></div>';
+    echo ' <a href="pages/login.php">Nie dodano bo: <br/>' . $mojerror . '</a>';
 }
+
+include('contact.php');
 }
 include('foot.php');
 ?>

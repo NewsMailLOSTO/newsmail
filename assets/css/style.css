@@ -16,7 +16,7 @@ a{text-decoration:none; color:#2b2b2b}
 a:hover{color:#646464; text-decoration:none}
 a:focus{outline:none; text-decoration:none}
 h2{font-family:'Oswald',sans-serif; line-height:23px}
-img{border:none; width: 700px;}
+img{border:none; width: 700px; object-fit: cover;}
 img:hover{opacity:0.75}
 .img-center{display:block; margin-left:auto; margin-right:auto; text-align:center}
 .img-right{display:block; margin-left:auto}
@@ -59,7 +59,7 @@ img:hover{opacity:0.75}
 .navbar-default .navbar-nav > li > a{color:#ef9911; display:block; font-family:"Oswald",sans-serif; font-size:15px; text-decoration:none; text-transform:uppercase; border-top:2px solid transparent; border-bottom:2px solid transparent; margin-top:-2px; margin-bottom:-2px; padding-bottom:17px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .dropdown-menu > li > a{color:#fff; font-family:"Oswald",sans-serif; padding:5px 15px; border-top:1px solid transparent; border-bottom:1px solid transparent; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
-#mainContent{background-color:#fff; display:inline; float:left; padding-top:15px; width:100%; padding-left: 1em;}
+#mainContent{background-color:#fff; display:inline; float:left; padding-top:15px; width:100%; padding-left: 1em; min-height: 600px;}
 .content_top{float:left; display:inline; width:100%}
 .latest_slider{float:left; display:inline; width:100%; padding-left:10px}
 .single_iteam{position:relative}
@@ -113,10 +113,12 @@ img:hover{opacity:0.75}
 .catg_titile{margin-bottom:18px; float:left} 
 .catg_titile a{color:#383838; font-size:24px}
 .comments_box{float:left; display:inline; width:100%; margin-bottom:5px}
-span.meta_date, span.meta_comment, span.meta_more{display:inline-block; margin-right:8px; color:#aaa; font-size:12px}
+span.meta_date, span.meta_comment, span.meta_more, span.meta_views, span.meta_rating{display:inline-block; margin-right:8px; color:#aaa; font-size:12px}
 span.meta_date:before{content:" "; font-family:FontAwesome; font-style:normal; font-weight:normal; padding-right:4px; text-decoration:inherit}
 span.meta_comment:before{content:" "; font-family:FontAwesome; font-style:normal; font-weight:normal; padding-right:4px; text-decoration:inherit}
 span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal; font-weight:normal; padding-right:4px; text-decoration:inherit}
+span.meta_views:before{content:" "; font-family:FontAwesome; font-style:normal; font-weight:normal; padding-right:4px; text-decoration:inherit}
+span.meta_rating:before{content:"❤ "; font-family:FontAwesome; font-style:normal; font-weight:normal; padding-right:4px; text-decoration:inherit}
 .business_category_right{float:right; display:inline; width:49%; padding-top:20px}
 .small_catg{}
 .small_catg li{border-bottom:1px dotted #e5e5e5; display:block; margin-bottom:10px; padding-bottom:10px; width:100%}
@@ -274,6 +276,13 @@ td.tablab{
 td{
 	padding: 0.5em;
 	
+}
+
+table.login{
+    margin-left:auto;
+    margin-right:auto; 
+    vertical-align: middle;
+    
 }
 /*
 Lenistwo ponad wszystko https://isabelcastillo.com/error-info-messages-css 

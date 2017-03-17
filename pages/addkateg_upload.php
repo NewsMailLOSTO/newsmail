@@ -9,7 +9,7 @@
     if (isset($_POST['btn-upload'])) {
 	$kateg = htmlspecialchars($_POST['kateg']);
     if (empty($kateg)) {
-	$mojerror = 'Nie wpisałeś redaktora <br/>';
+	$mojerror = 'Nie wpisałeś kategorii <br/>';
     }
     if (empty($mojerror)) {
 	mysql_select_db($db_database, $db_dodaj);

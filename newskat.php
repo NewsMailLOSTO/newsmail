@@ -55,6 +55,23 @@
 		$newsy_kolumny[9] = $row_Recordset1['ostatnio_czytane'];
 		$newsy_kolumny[10] = $row_Recordset1['nazwa_kategorii'];
 		$newsy_kolumny[11] = $row_Recordset1['imie'];
+		$newsy_kolumny[12] = $row_Recordset1['wyswietlenia'];
+		
+		
+		$query = mysql_query("SELECT MAX(data) as ocena_data, ROUND(AVG(ocena),1) as rating FROM ocena WHERE id_news=" . $row_Recordset1['id_news'], $db);
+		if ($query) {
+		    $row = mysql_fetch_assoc($query);
+		    $newsy_kolumny[13] = $row['rating'];
+		    $newsy_kolumny[14] = $row['ocena_data'];
+		    if($newsy_kolumny[13] == NULL){
+			$newsy_kolumny[13] = "Brak ocen";
+		    }
+		    if($newsy_kolumny[14] == NULL){
+			$newsy_kolumny[14] = "Brak daty";
+		    }
+		} 
+		$newsy_kolumny[15] = $row_Recordset1['obrazek'];
+		
 		$newsy[] = $newsy_kolumny;
 	    }
 	} while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
@@ -64,7 +81,7 @@
 	
 	//--------------------------------------------------------------------------
 	
-	
+
 	
     $query_Recordset1 = "SELECT * FROM `kat_newsow` WHERE 1";
     $query_limit_Recordset1 = sprintf("%s LIMIT %d, %d", $query_Recordset1, $startRow_Recordset1, $maxRows_Recordset1);
@@ -109,6 +126,14 @@
 	    function sortByLastRead($a, $b){
 		return $b[9] - $a[9];
 	    }
+	    
+	    
+	    $newsy_oceniane = $newsy;
+	    usort($newsy_oceniane, 'sortByLastRated');
+	    function sortByLastRated($a, $b){
+		return $b[14] - $a[14];
+	    }
+	
 	
 	 
 ?>

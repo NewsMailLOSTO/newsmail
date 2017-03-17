@@ -49,14 +49,26 @@
 	do {
 	    
 	    if ($row_Recordset1['id_kat_newsow'] >= $totalRows_Recordset1) {
-			if($row_Recordset1["id_news"] == NULL){
-			echo '<div class=notif-info> Brak newsów </div>';
-		     break;
-			}	
-		 echo '<li><table>';
-		   echo '<tr><td width="50%">  <div class="catgimg2_container"> <a href="artykul.php?id=' . $row_Recordset1['id_news'] . '"><img alt="" src="images/390x240x1.jpg"></a> </div>  </td>';
+		if($row_Recordset1["id_news"] == NULL){
+		    echo '<div class=notif-info> Brak newsów </div>';
+		    break;
+		}	
+		    $query = mysql_query("SELECT ROUND(AVG(ocena),1) as rating FROM ocena WHERE id_news=" . $row_Recordset1["id_news"], $db);
+		    if ($query) {
+			$row = mysql_fetch_assoc($query);
+			$ocena = $row['rating'];
+			if ($ocena == NULL) {
+			    $ocena = "Brak ocen";
+			}
+		    } else {
+			echo '<div class="notif-warning">' . mysql_error() . '</div>';
+		    }
+	    echo '<li><table>';
+		   echo '<tr><td width="50%">  <div class="catgimg2_container"> <a href="artykul.php?id=' . $row_Recordset1['id_news'] . '"><img alt="" src="'.$row_Recordset1['obrazek'] .'"></a> </div>  </td>';
 		   echo '<td>  <h2 class="catg_titile"><a href="artykul.php?id=' . $row_Recordset1['id_news'] . '">' . $row_Recordset1['tytul'] . '</a></h2>  ';
 		   echo '<div class="comments_box"> <span class="meta_date">' . $row_Recordset1['data'] . '</span> <span class="meta_comment"><a href="#">' . $row_Recordset1['nazwa_kategorii'] . '</a></span><span class="meta_more"> ' . $row_Recordset1['imie'] . ' </span>';
+		   echo '<span class="meta_views">' . $row_Recordset1['wyswietlenia'] . '</span> ';
+		   echo '<span class="meta_rating">' . $ocena . '</span> ';
 		   echo '<p>' . $row_Recordset1['wstep'] . '</p></td></tr>';
 		   //echo '<div class=notif-info>' . $row_Recordset1["id_news"] . '</br>' . var_dump($row_Recordset1["id_news"]) . '</div>';
 		   echo '</div>';
@@ -71,4 +83,6 @@
 	echo '</div>';
 	
 	 include ('prawy.php');
+	 include ('foot.php');
+	 
 	?>

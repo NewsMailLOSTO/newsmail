@@ -34,18 +34,34 @@
                 <li><a href="<?php echo $krowa;?>pages/archive3.html">Archive 3</a></li>
               </ul>
             </li>-->
-            <li><a href="<?php echo $krowa;?>rejestracja.php">Rejestracja</a></li>
-            <li><a href="<?php echo $krowa;?>login.php">Login</a></li>
-            <li><a href="<?php echo $krowa;?>pages/admin.php">Admin</a></li>
-       
-	    
+            
+            
+          
 		<div class="header_top_right">
                     <ul class="nav navbar-nav custom_nav" >
                         
+			<?php 
+			if ($_SESSION['signed_in'] == true){
+			    echo '<li><a href="' . $krowa . 'user.php">' . $_SESSION['imie'] . '</a></li>;';
+			    
+			    if ($_SESSION['kat_uzytkownikow'] == 1){			    
+				echo '<li><a href="' . $krowa . 'pages/admin.php">Admin</a></li>;';
+			    }
+			    
+			    if ($_SESSION['kat_uzytkownikow'] == 2){			    
+				echo '<li><a href="' . $krowa . 'pages/admin.php">Redaktor</a></li>;';
+			    }
+			    
+			    echo '<li><a href="' . $krowa . 'logout.php">Logout</a></li>';   
+			}
+			else{
+			    echo '<li><a href="' . $krowa . 'login.php">Login</a></li>;';
+			    echo '<li><a href="' . $krowa . 'rejestracja.php">Rejestracja</a></li>  ';
+			    
+			}
+			?>
 			
-                        <li><a href="pages/admin.php"> <?php echo $_SESSION['imie']; ?> </a> </li>
-                        <li><a href="<?php echo $krowa;?>logout.php">Logout</a></li>   
-                        
+                       
                        
 		   </ul>
 		</div>
